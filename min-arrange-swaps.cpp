@@ -1,7 +1,17 @@
+/**
+ * @brief      This class describes a solution.
+ */
 class Solution {
     
 private:
     
+    /**
+     * @brief      Finds trailing zeros.
+     *
+     * @param      a     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     vector<int> find_trailing_zeros(vector<vector<int>>& a)
     {
         int i, j;
@@ -16,6 +26,15 @@ private:
         return ltz;    
     }
     
+    /**
+     * @brief      { function_description }
+     *
+     * @param      ltz   The ltz
+     * @param[in]  i     { parameter_description }
+     * @param[in]  j     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     int swap_vec(vector<int>& ltz, int i, int j)
     {
         int tmp = ltz[j];
@@ -29,6 +48,14 @@ private:
         return count;
     }
     
+    /**
+     * @brief      Finds a nearest.
+     *
+     * @param      ltz   The ltz
+     * @param[in]  j     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     int find_nearest(vector<int>& ltz, int j)
     {
         int ret = -1;
@@ -45,6 +72,13 @@ private:
     }
 public:
     
+    /**
+     * @brief      { function_description }
+     *
+     * @param      grid  The grid
+     *
+     * @return     { description_of_the_return_value }
+     */
     int minSwaps(vector<vector<int>>& grid) {
         vector<int> ltz = find_trailing_zeros(grid);
         int count = 0;
@@ -62,3 +96,14 @@ public:
         return count;
     }
 };
+
+
+/**
+ * @brief      { function_description }
+ *
+ * @return     { description_of_the_return_value }
+ */
+int main()
+{
+
+}
